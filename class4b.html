@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shape animation</title>
+	<style>
+	.ball_anim{
+	animation: bounce 1s infinite;
+	}
+	</style>
+    </head>
+    <body>
+
+        <svg width="200" height="200">
+  	<style>
+ 	   @keyframes bounce {
+      		0% { cy: 60px; }
+      		100% { cy: 130px; }
+		animation: bounce 1s infinite;
+    		}
+ 	 </style>
+  	<circle cx="100" cy="100" r="50" fill="red" style="animation: bounce 1s infinite;animation-direction: alternate-reverse; animation-timing-function:ease-out;"></circle>
+	</svg>
+
+	<svg height="140" width="500" >
+	<style>
+	@keyframes woosh{
+	0%{cy:90px;}
+	50%{cx:200px; cy:50px;}
+	100%{cx:400 ;cy:90px;
+	}
+	</style>
+  	<ellipse rx="100" ry="50" cx="120" cy="80" fill="blue"
+  	style="animation:woosh 2s infinite;">
+		</svg>
+
+    </body>
+</html>

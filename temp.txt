@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px;}
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Red Box change color</h1>
+
+<div></div>
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+position: relative;
+  animation-name: example;
+  animation: example 2s infinite;
+animation-delay:1s;
+animation-direction: alternate-reverse;
+animation-timing-function: ease-in;
+}
+
+@keyframes example {
+   0%   {background-color:#FF0000;left:0px;top:0px;}
+  20%  {background-color: #00FF00;left:200px;top:0px;}
+  40%  {background-color: #0000FF;left:200px;top:200px;}
+  60% {background-color: #FF0000;left:0px;top:200px;}
+80% {background-color: #00FF00;left:0px;top:0px;}
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Red Box change color</h1>
+
+<div></div>
+
+
+</body>
+</html>
