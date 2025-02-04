@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class 3</title>
+    </head>
+    <body>
+        <p>10&nbsprs</p>
+	<p>&gt;&nbsp&lt;&nbsp&amp;&nbsp&quot;&nbsp&apos;&nbsp&cent;&nbsp&pound;&nbsp&yen;&nbsp&euro;&nbsp&copy;&nbsp&reg;</p>
+	<p>&forall;&nbsp&part;&nbsp&axist;&nbsp&empty;&nbsp&nabla;&nbsp&aln;&nbsp&nj;&nbsp&prod;&nbsp&sum;</p>
+	<p>&nbsp&alpha;&nbsp&beta;&nbsp&gamma;&nbsp&Delta;&nbsp&epsilon;&nbsp&zeta;</p>
+	<p>&larr;&nbsp&uarr;&nbsp&rarr;&nbsp&darr;</p>
+	<p>1&plus;1&ntequal;1</p>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	Sorry, your browser does not support canvas.
+	</canvas>
+	<script>const canvas = document.getElementById("myCanvas");
+	const ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.moveTo(0,0);
+	ctx.lineTo(200,100);
+	ctx.stroke();
+	</script><br>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+	Sorry, your browser does not support canvas.
+	</canvas>
+	<script>
+	const canvas = document.getElementById("myCanvas");
+	const ctx = canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+	ctx.stroke();
+	</script>
+	<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #000000;">
+	Sorry, your browser does not support canvas.
+	</canvas>
+	<script>
+	var c = document.getElementById("myCanvas2");
+	var ctx = c.getContext("2d");
+	ctx.font = "30px Arial";
+	ctx.strokeTest("Hello World");
+	</script><br>
+	<canvas id="myCanvas3" width="200" height="100" style="border:2px solid #000000;"</canvas>
+	<script>
+	var c = document.getElementById("myCanvas3");
+	var ctx = c.getContext("2d");
+	var grd = ctx.createLinearGradient(0,0,200,0);
+	grd.addColorStop(0,"red");
+	grd.addColorStop(1,"white");
+	ctx.fillStyle = grd;
+	ctx.fillRect(10,10,150,80);
+	</script>
+
+	<canvas id="myCanvas4" width="200" height="100" style="border:4px solid #000000;"</canvas>
+	<script>
+	var c = document.getElementById("myCanvas4");
+	var ctx = c.getContext("2d");
+	var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+	grd.addColorStop(0,"red");
+	grd.addColorStop(1,"white");
+	ctx.fillStyle = grd;
+	ctx.fillRect(10,10,150,80);
+	</script><br>
+	<svg width="100" height="100">
+	<circle cx = "50" cy="50"r="40"
+	stroke="green" stroke-width="4" fill="red">
+	Not supported
+	</svg>
+	<svg width="400" height="100">
+	<rect width = "400" height="100"
+	style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)"/>
+	Not supported
+	</svg>
+	<svg width="400" height="180">
+	<rect x="50" y="20" rx="20" ry="20"
+	width="150" height="150"
+	style="fill:red;stroke:black;stroke-width:5;opacity:0.5"/>
+	</svg>
+	</svg>
+	<svg width="300" height="200">
+	<polygon points="100,10,40,198,190,78 10,78 160,198"
+	style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+	</svg>
+	
+	
+	
+    </body>
+</html>

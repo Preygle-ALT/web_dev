@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>class3b</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+		p.a{r
+		margin-left:50px;
+		color:yellow;
+		text-align:centre;
+		text-transformation:uppercase;
+		}
+		</style>
+	</head>
+	<body>
+	<svg height="130" width="500">
+		<defs>
+		<linearGradient id="grad1" x1="0%" y1="0%" x2="100% y2="0%">
+		<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1"/>
+		<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1"/>
+		</linearGradient>
+		</defs>
+		not supported
+	</svg>
+	
+	<svg height="150" width="400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color:rgb(255,255,0) />
+      <stop offset="100%" stop-color="red" />
+    </linearGradient>
+  </defs>
+ <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+</svg>
+	<ellipse cs="100" cy="70" rx="85" ry="55" fill="url(#grad1)"/>
+	<text fill="#ffaaaa" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+		NOT SUPPORTED
+	</svg>
+
+
+	<br><video width="320" height="240" controls autoplay muted>
+		<source src="video/vid.mp4" type="video/mp4">
+		not supported mp4
+	</video>
+
+	<br><audio controls muted>
+  		<source src="audio/aud.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+
+	<p>CLICKKKKK FOR COORDINATES</p>
+<button onclick="getLocation()">TRY</button>
+	<p id="demo"></p>
+	<script>
+	const x = document.getElementById("demo");
+
+	function getLocation() {
+  	if (navigator.geolocation) {
+    	navigator.geolocation.getCurrentPosition(showPosition);
+  		} else { 
+    		x.innerHTML = "Geolocation is not supported by this browser.";
+  		}
+	}
+
+	function showPosition(position) {
+ 	 x.innerHTML = "Latitude: " + position.coords.latitude + 
+  	"<br>Longitude: " + position.coords.longitude;
+	}
+	</script>
+	</body>
+	<p1 style="color:lime; margin-left:100px">This in inline css</p1>
+	<p>This is external css</p>
+	<h1>This is a internal styles heading</h1>
+	<h3>Trying different css styling</h3>
+	<a href="https://www.google.com/">Visit google</a>
+
+	<ul class="a">
+ 	 <li>Coffee</li>
+ 	 <li>Tea</li>
+ 	 <li>Milk</li>
+	</ul>
+
+	<ol class="c">
+  	<li>break egg</li>
+  	<li>cook in pan</li>
+  	<li>add spice</li>
+	</ol>
+	
+	<ul class="b">
+ 	 <li>bread</li>
+ 	 <li>toast</li>
+ 	 <li>tea</li>
+	</ul>
+
+	<table>
+  	<tr>
+   	 <th>A</th>
+    	<th>B</th>
+   	 <th>C</th>
+ 	 </tr>
+  	<tr>
+    	<td class="td1">Alpha</td>
+    	<td>Beta</td>
+   	 <td>Charlie</td>
+ 	 </tr>
+  	<tr>
+   	 <td>Armenia</td>
+   	 <td>Belgium</td>
+   	 <td>Columbia</td>
+  	</tr>
+	</table>
+	<br><br><br>
+	<p2 class="one">This is numeric width</p>
+
+	<p3 class="two">This is alpabetic width</p>
+
+	<p border:1px solid black;margin:25px 50px 75px 100px;padding:25px 50px 75px 100px;>margin,padding 4 values</p>
+	<p border:1px solid black;margin:25px 50px 100px;padding:25px 50px 100px;>margin,padding 3 values</p>
+	<p border:1px solid black;margin:25px 100px;padding:25px 100px;>margin,padding 2 values</p>
+	<p border:1px solid black;margin:100px;pading:100px;>margin,padding 1 values</p>
+
+	
+	
+</html>

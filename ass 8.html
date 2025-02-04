@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Multimedia Integration</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multimedia Integration</h1>
+    
+    <!-- Video Player -->
+    <video id="videoPlayer" controls>
+        <source src="12943967_1080_1920_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <br>
+    
+    <!-- Audio Player -->
+    <audio id="audioPlayer" loop>
+        <source src="background.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <button onclick="toggleAudio()">Play/Pause Background Music</button>
+    
+    <script>
+        let audio = document.getElementById("audioPlayer");
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+h1{
+color:#1bbfaa;
+text-align:center;
+text-decoration:overline;
+text-decoration:line-through;
+text-decoration:underline;
+text-indent:50px
+text-transformation:capitalize;
+font-size:1.2em;
+}
+
+h3{
+font-family:"Times New Roman";
+font-style:oblique;
+font-size:25px;
+}
+
+a:link{color:#FF0000;text-decoration:none;}
+a:visited{color:#00ff00;}
+a:hover{color:#ff00ff;}
+a:active{color;#ffff00;}
+body{
+background-color:#b0c598;
+background-image:url('background.png');
+background-repeat:no-repeat;
+background-position:right top;
+}
+
+p2.one{
+border-color:black;
+border-style:solid;
+border-width:5px;
+border-top-style:dotted;
+border-bottom-style:double;
+border-left-style:dashed;
+border-bottom-right:solid;
+}
+
+p3.two{
+border-style:solid;
+border-width:medium;
+}
+
+ul.a{
+list-style-type:square;
+}
+
+ol.c {
+  list-style-type: lower-roman;
+}
+
+ul.b{
+list-style-image: url('heart.png');
+background-color:white;
+}
+
+table{
+border-collapse:collapse;
+width:60%;
+}
+
+th,td{
+height:40px;
+padding:5px;
+text-align: center;
+}
+
+td.td1{
+color:pink;
+height:50px;
+border:3px solid pink;
+background-color:yellow;
+}
+
+
+
+table,th,td{
+border:3px solid yellow;
+}
+
