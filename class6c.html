@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Performance Analysis</title>
+	<style>
+		*{
+			text-align:centre;
+			font:bold;
+		}
+	</style>
+    <script>
+        let employees = [];function addEmployee() {
+        let empId = document.getElementById("empId").value;
+        let productivity = parseInt(document.getElementById("productivity").value) * 5;
+        let quality = parseInt(document.getElementById("quality").value) * 10;
+        let deadlines = parseInt(document.getElementById("deadlines").value) * 20;
+        let interaction = parseInt(document.getElementById("interaction").value) * 5;
+        let attendance = parseInt(document.getElementById("attendance").value) * 10;
+        let totalScore = productivity + quality + deadlines + interaction + attendance;
+        employees.push({ empId, totalScore });
+        document.getElementById("empForm").reset();
+    }
+    
+    function analyzeScores() {
+        if (employees.length === 0) return; 
+        let scores = employees.map(emp => emp.totalScore);
+        let lowest = Math.min(...scores);
+        let highest = Math.max(...scores);
+        let average = scores.reduce((a, b) => a + b, 0) / scores.length;
+        let aboveAverage = employees.filter(emp => emp.totalScore > average);
+        let belowAverage = employees.filter(emp => emp.totalScore < average);
+        document.getElementById("results").innerHTML =` 
+            <p>Lowest Score: ${lowest}</p>
+            <p>Highest Score: ${highest}</p>
+            <p>Average Score: ${average}</p>
+            <p>Number of Employees Above Average: ${aboveAverage.length}</p>
+            <p>Number of Employees Below Average: ${belowAverage.length}</p>
+        `;
+    }
+</script>
+</head>
+<body>
+    <h2>Employee Performance Form</h2>
+    <form id="empForm">
+        <label>Employee ID:</label>
+        <input type="text" id="empId" required><br><br>
+        <label>Target Achieved (1-5):</label>
+        <input type="number" id="productivity" min="1" max="5" required><br><br>
+        <label>Quality of Output (1-5):</label>
+        <input type="number" id="quality" min="1" max="5" required><br><br>
+        <label>Adherence to Deadlines (1-5):</label>
+        <input type="number" id="deadlines" min="1" max="5" required><br><br>
+        <label>Interaction with Team (1-5):</label>
+        <input type="number" id="interaction" min="1" max="5" required><br><br>
+        <label>Attendance (1-5):</label>
+        <input type="number" id="attendance" min="1" max="5" required><br><br>
+        <button type="button" onclick="addEmployee()">Add Employee</button>
+        <button type="button" onclick="analyzeScores()">Analyze Scores</button>
+    </form>
+    <div id="results"></div>
+</body>
+</html>
