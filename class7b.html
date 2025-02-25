@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <fieldset>
+        <legend>Personal data</legend>
+        <label for="lname">Last name*</label><br>
+	    <input type="text" id="lname"><br><br>
+        <label for="fname" style="text-align: right;">First name*</label>
+        <label for="mname">Middle name*</label><br>
+        <input type="text" id="fname">
+	    <input type="text" id="mname"><br><br>
+        <label for="email" id="mail">Email*</label><br>
+        <input type="email" id="mail"><br><br>
+        <label for="resume">Resume*</label><br>
+	    <textarea id="resume" name="resume rows=4"></textarea><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Job</legend>
+        <label>Position applied for:
+            <select>
+                <option>Administration</option>
+                <option>Engineering</option>
+                <option>Marketing</option>
+            </select>
+        </label><br><br>
+        <div><label>Hourly Wage*: <input type="number" id="hourly_wage" required></label></div><br><br>
+        <label>Date you can start</label><br> 
+            <input type="number" id="year" min = "2020" placeholder="2020">
+            <input type="number" id="month" min = "6" placeholder="06">
+            <input type="number" id="day" min="15" placeholder="15">
+        <div>
+        <label>Weekly Hours*: </label><br>
+        <input type="number" id="weekly_hours" style="align-content:center;" required>
+        </div>
+    </fieldset>
+    <input type="submit" value="Submit" />
+
+    </form>
+</body>
+</html>

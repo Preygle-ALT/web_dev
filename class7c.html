@@ -1,0 +1,157 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <script>
+        function validateForm() {
+            let resume = document.getElementById("resume").value.trim();
+            let hourlyWage = parseFloat(document.getElementById("hourly_wage").value);
+            let startDate = document.getElementById("start_date").value;
+            let weeklyHours = parseInt(document.getElementById("weekly_hours").value);
+
+            // Resume length validation
+            if (resume.length < 200 || resume.length > 300) {
+                alert("Resume must be between 200 and 300 characters.");
+                return false;
+            }
+
+            // Hourly wage validation
+            if (hourlyWage < 30 || hourlyWage > 60 || isNaN(hourlyWage)) {
+                alert("Hourly wage must be between 30 and 60 rupees.");
+                return false;
+            }
+
+            // Date validation
+            let minDate = new Date("2020-06-15");
+            let selectedDate = new Date(startDate);
+            if (selectedDate < minDate) {
+                alert("Enter a date after 15-06-2020 only.");
+                return false;
+            }
+
+            // Weekly hours validation
+            if (weeklyHours < 35 || weeklyHours > 40 || isNaN(weeklyHours)) {
+                alert("Weekly hours must be between 35 and 40.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Prevent right-click
+        document.addEventListener("contextmenu", function(event) {
+            event.preventDefault();
+            alert("Right click not allowed");
+        });
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Personal Data</legend>
+            <label>Last Name*: <input type="text" required></label><br><br>
+            <label>First Name*: <input type="text" required></label>
+            <label>Middle Name: <input type="text"></label><br><br>
+            <label>Email*: <input type="email" required></label><br><br>
+            <label>Resume*:</label><br>
+            <textarea id="resume" rows="5" cols="40" required></textarea><br><br>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Job</legend>
+            <label>Position applied for:
+                <select>
+                    <option>Administration</option>
+                    <option>Engineering</option>
+                    <option>Marketing</option>
+                </select>
+            </label><br><br>
+            <label>Hourly Wage*: <input type="number" id="hourly_wage" required></label><br><br>
+            <label>Date you can start*: <input type="date" id="start_date" required></label><br><br>
+            <label>Weekly Hours*: <input type="number" id="weekly_hours" required></label><br><br>
+        </fieldset>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 550px;
+      }
+      .a1{
+        display: flex;
+    }
+
+    .a1 #right{
+        text-align: right;
+    }
+
+
+
+      .form-right {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .form-right label,
+      .form-right input {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Personal data</legend>
+        <label for="lname">Last name*</label><br />
+        <input type="text" id="lname" /><br /><br />
+        <div class="a1">
+        <label for="fname">First name*</label><br />
+        <input type="text" id="fname" /><br /><br />
+        <label id="right" for="mname">Middle name*</label><br />
+        <input id="right" type="text" id="mname" />
+        </div>
+        <br /><br />
+        <label for="email" id="mail">Email*</label><br />
+        <input type="email" id="mail" /><br /><br />
+        <label for="resume">Resume*</label><br />
+        <textarea id="resume" name="resume" rows="4" cols="65"></textarea><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Job</legend>
+        <label>Position applied for:</label>
+        <select>
+          <option>Administration</option>
+          <option>Engineering</option>
+          <option>Marketing</option>
+        </select>
+        <br /><br />
+        <div class="form-right">
+          <label for="hourly_wage">Hourly Wage*:</label>
+          <input type="number" id="hourly_wage" required /><br />
+          <label for="weekly_hours">Weekly Hours*:</label>
+          <input type="number" id="weekly_hours" required />
+        </div>
+        <br /><br />
+        <label>Date you can start</label><br />
+        <input type="number" id="year" min="2020" placeholder="2020" />
+        <input type="number" id="month" min="6" placeholder="06" />
+        <input type="number" id="day" min="15" placeholder="15" /><br /><br />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+
