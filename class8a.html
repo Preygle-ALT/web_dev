@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      <p id="p1">This ia para</p>
+      <p id="p2">This is another para</p>
+    </div>
+
+    <script>
+      var para = document.createElement("p");
+      var node = document.createTextNode("This is added");
+      para.appendChild(node);
+      var element = document.getElementById("div1");
+      element.appendChild(para);
+    </script>
+
+    <div id="div2">
+      <p id="p3">This will be removed</p>
+      <p id="p4">This will remain</p>
+    </div>
+
+    <script>
+      var parent = document.getElementById("div2");
+      var child = document.getElementById("p3");
+      parent.removeChild(child);
+    </script>
+
+    <div id="demo">
+        <h1>The SMLHttpRequest Object</h1>
+        <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+    
+  </body>
+</html>
